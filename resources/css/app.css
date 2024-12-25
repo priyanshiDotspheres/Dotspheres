@@ -1,0 +1,47 @@
+body {
+    background-color: #000;
+    color: #fff; /* Optional: set default text color to white for contrast */
+}
+
+
+/* Make the text white */
+.navbar-nav .nav-link {
+    color: white !important; /* Ensures text is white */
+}
+
+/* Make the digits blue */
+.navbar-nav .nav-link .digit {
+    color: #007bff; /* Bootstrap's primary blue color */
+    font-weight: bold; /* Optional: to make digits stand out more */
+}
+
+/* Ensure the link text (without digits) is still white */
+.navbar-nav .nav-link:hover {
+    color: white !important; /* Keeps the hover text color white */
+}
+
+.custom-light-gray {
+    font-size: 16px;
+    color: #838383; /* The desired light gray color */
+}
+
+
+.custom-card-border {
+    position: relative;
+    border: 5px solid #007bff;  /* Solid blue border */
+    border-radius: 10px;         /* Optional: rounded corners */
+    padding: 20px;
+    background-color: #000;      /* Background color of the card */
+    box-sizing: border-box;      /* Ensure padding doesn't overlap with border */
+}
+
+.custom-card-border::before {
+    content: '';
+    position: absolute;
+    top: -5px; left: -5px; right: -5px; bottom: -5px; /* Offset the image so it appears as border */
+    background-image: url('/public/images/test.png');  /* Path to your border image */
+    background-size: cover;           /* Make the image cover the border space */
+    background-repeat: no-repeat;     /* Don't repeat the image */
+    border-radius: 10px;              /* Optional: rounded corners */
+    z-index: -1;                      /* Place the image behind the content */
+}
